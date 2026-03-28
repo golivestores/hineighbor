@@ -687,6 +687,51 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 
 })();</script>
 <!-- removed: perf-kit -->
+
+<style id="himax-brand-override">
+/* Hide original logo images */
+.header-logo .brand-logo-img,
+.footer-logo .brand-logo-img {
+  display: none !important;
+}
+
+/* Show "Himax" text on default (dark text) logo */
+.header-logo .brand-logo-default,
+.footer-logo .brand-logo-default {
+  display: inline-flex !important;
+  align-items: center;
+}
+.header-logo .brand-logo-default::after,
+.footer-logo .brand-logo-default::after {
+  content: "Himax";
+  font-family: var(--font-heading-family, sans-serif);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: rgb(var(--color-foreground, 0 0 0));
+  white-space: nowrap;
+}
+
+/* Show "Himax" text on inverse (light text) logo */
+.header-logo .brand-logo-inverse,
+.footer-logo .brand-logo-inverse {
+  display: inline-flex !important;
+  align-items: center;
+}
+.header-logo .brand-logo-inverse::after,
+.footer-logo .brand-logo-inverse::after {
+  content: "Himax";
+  font-family: var(--font-heading-family, sans-serif);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+</style>
+
 </head>
 
   <body class="surface surface-base on-surface on-surface-light">
